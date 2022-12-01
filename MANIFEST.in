@@ -1,0 +1,3 @@
+graft adventofcode2022/data
+graft docs
+recursive-include tests *.py

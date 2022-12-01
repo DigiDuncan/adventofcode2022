@@ -1,0 +1,2 @@
+class ThisShouldNeverHappenExeception(Exception):
+    pass
