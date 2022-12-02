@@ -15,6 +15,8 @@ __pycache__
 # Visual Studio Code
 *.code-workspace
 
-adventofcode2022/data/
+# Data
+adventofcode2022/data/*.txt
 
+# Github
 .github/
