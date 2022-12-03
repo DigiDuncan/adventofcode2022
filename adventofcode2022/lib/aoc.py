@@ -46,7 +46,9 @@ class DayTemplate:
 
     @property
     def data(self) -> list:
-        return [self.process(i) for i in self._data]
+        d = [self.process(i) for i in self._data]
+        d.pop(-1)
+        return d
 
     def part_1(self) -> Any:
         logger.debug("Calculating part 1...")

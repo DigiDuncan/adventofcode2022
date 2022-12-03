@@ -21,7 +21,6 @@ def generate_move(enemy: Move, desire: Outcome) -> Move:
         case "S":
             return {"lose": "P", "draw": "S", "win": "R"}[desire]
 
-
 def check_win(enemy: Move, player: Move) -> Outcome:
     check_string = "RPS"
     player_index = check_string.index(player)
@@ -34,7 +33,6 @@ def check_win(enemy: Move, player: Move) -> Outcome:
         outcome = "lose"
     return outcome
 
-
 class Day(DayTemplate):
     def __init__(self):
         super().__init__(2)
@@ -43,8 +41,6 @@ class Day(DayTemplate):
         super().part_1()
         scores = []
         for line in self.data:
-            if line == "":
-                continue
             enemy, player = line.split()
             enemy: Move = shape_map[enemy]
             player: Move = shape_map[player]
@@ -52,7 +48,6 @@ class Day(DayTemplate):
             score = score_map[player] + score_map[outcome]
             scores.append(score)
         return sum(scores)
-
 
     def part_2(self):
         super().part_2()
